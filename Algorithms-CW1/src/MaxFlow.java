@@ -106,37 +106,37 @@ class MaxFlow {
             }
             count++;
         }
-             int[][] edges;
-
-        int count1 = 0;
-
-            Scanner reader = new Scanner("./src/bridge_1.txt");
-            reader.nextLine();// Skips the first line (nameList)
-
-            // Calculate total number of 2 element arrays
-            while (reader.hasNextLine()) {
-                String passer = reader.nextLine();
-                count1 += passer.split(" ").length - 1;
-            }
-            reader.close();
-
-            edges = new int[count1][];
-            int i = 0;
-            reader = new Scanner("./src/bridge_1.txt");
-            reader.nextLine();// Skips the first line (nameList)
-            while (reader.hasNextLine()) {
-                String passer = reader.nextLine();
-
-                String[] split = passer.split(" ");
-                for (int j = 1; j < split.length; j++) {
-                    edges[i + j - 1] = new int[nodes];
-                    edges[i + j - 1][0] = Integer.parseInt(split[0]);
-                   edges[i + j - 1][1] = Integer.parseInt(split[j]);
-                }
-                i += split.length - 1;
-            }
-            reader.close();
-            print(edges);
+//             int[][] edges;
+//
+//        int count1 = 0;
+//
+//            Scanner reader = new Scanner("./src/bridge_1.txt");
+//            reader.nextLine();// Skips the first line (nameList)
+//
+//            // Calculate total number of 2 element arrays
+//            while (reader.hasNextLine()) {
+//                String passer = reader.nextLine();
+//                count1 += passer.split(" ").length - 1;
+//            }
+//            reader.close();
+//
+//            edges = new int[count1][];
+//            int i = 0;
+//            reader = new Scanner("./src/bridge_1.txt");
+//            reader.nextLine();// Skips the first line (nameList)
+//            while (reader.hasNextLine()) {
+//                String passer = reader.nextLine();
+//
+//                String[] split = passer.split(" ");
+//                for (int j = 1; j < split.length; j++) {
+//                    edges[i + j - 1] = new int[nodes];
+//                    edges[i + j - 1][0] = Integer.parseInt(split[0]);
+//                   edges[i + j - 1][1] = Integer.parseInt(split[j]);
+//                }
+//                i += split.length - 1;
+//            }
+//            reader.close();
+//            print(edges);
 
 
         //Initializing MaxFLow object
